@@ -19,7 +19,8 @@ app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await pool.query(
             `SELECT d.name AS dog_name, d.size, u.username AS owner_username
-            FROM Dogs d`
+            FROM Dogs d
+            JOIN Users u ON d.owner_id = u.user_id;`
         )
     }
 });
