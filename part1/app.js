@@ -66,3 +66,4 @@ app.get('/api/walkers/summary', async (req, res) => {
     }
 });
 
+module.exports = pool;
