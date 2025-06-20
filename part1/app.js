@@ -2,7 +2,6 @@ const express = require('express');
 const mysql = require('mysql2/promise');
 
 const app = express();
-const port = 8080;
 
 // for database
 const pool = mysql.createPool({
@@ -65,5 +64,3 @@ app.get('/api/walkers/summary', async (req, res) => {
         res.status(500).json({ error: 'Failed to get Walkers Completed Walk summaries', err });
     }
 });
-
-module.exports = pool;
