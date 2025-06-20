@@ -53,7 +53,8 @@ app.get('/api/walkers/summary', async (req, res) => {
                     COUNT(rt.rating_id) AS num_ratings,
                     ROUND(AVG(rt.rating_int), 1) AS average_rating,
                     SUM(CASE WHEN wr.status = 'completed' THEN 1 ELSE 0 END) AS num_completed
-                    FROM `
+                    FROM Users u
+                    LEFT JOIN WalkApplication a ON u_user`
 
         );
 
