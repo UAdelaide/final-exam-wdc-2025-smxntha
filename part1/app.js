@@ -48,7 +48,9 @@ app.get('/api/walkrequests/open', async (req, res) => {
 // GET: Walker summaries w/ average rating and no. of completed walks
 app.get('/api/walkers/summary', async (req, res) => {
     try {
-        const[walkerSummaryRows] = 
+        const[walkerSummaryRows] = await pool.query(
+            `SELECT u.username `
+        );
 
     } catch (err) {
 
