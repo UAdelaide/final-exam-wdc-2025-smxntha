@@ -31,7 +31,7 @@ app.get('/api/dogs', async (req, res) => {
 // GET: Open walk requests, include dog name, requested time, location and owner username
 app.get('/api/walkrequests/open', async (req, res) {
     try {
-        const [openRows] = await pool.query(
+        const [openReqRows] = await pool.query(
             `SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr. location,
             u.username AS owner_username
             FROM WalkRequests `
