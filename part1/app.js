@@ -41,6 +41,6 @@ app.get('/api/walkrequests/open', async (req, res) {
         );
         res.json(openReqRows);
     } catch (err) {
-        res.status(500).json({ 'Failed to fetch open '})
+        res.status(500).json({ 'Failed to fetch open Walk Requests', err }); 
     }
 });
