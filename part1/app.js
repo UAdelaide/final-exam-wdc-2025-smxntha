@@ -65,3 +65,5 @@ app.get('/api/walkers/summary', async (req, res) => {
         res.status(500).json({ error: 'Failed to get Walkers Completed Walk summaries', err });
     }
 });
+
+app.listen(port)
