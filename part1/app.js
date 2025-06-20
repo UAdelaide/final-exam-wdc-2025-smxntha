@@ -17,6 +17,6 @@ app.use(express.json());
 // GET: List of all dogs (name and size_ and ownder username)
 app.get('/api/dogs', async (req, res) => {
     try {
-        
+        const [rows] = await pool.query
     }
 });
