@@ -44,3 +44,5 @@ app.get('/api/walkrequests/open', async (req, res) {
         res.status(500).json({ error: 'Failed to fetch open Walk Requests', err });
     }
 });
+
+// GET: Walker sumam
