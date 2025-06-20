@@ -14,4 +14,4 @@ const pool = mysql.createPool({
 
 app.use(express.json());
 
-// GET: all dogs with size and 
+// GET: all dogs with ow
