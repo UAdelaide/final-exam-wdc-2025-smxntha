@@ -66,4 +66,6 @@ app.get('/api/walkers/summary', async (req, res) => {
     }
 });
 
-app.listen(8080)
+app.listen(8080, () => {
+    console.log('Server is running at https://localhost:')
+})
