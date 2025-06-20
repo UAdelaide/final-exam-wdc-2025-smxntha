@@ -52,7 +52,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             `SELECT u.username AS walker_username,
                     COUNT(rt.rating_id) AS num_ratings,
                     ROUND(AVG(rt.rating_int), 1) AS average_rating,
-                    SUM(CASE WHEN wr.status)`
+                    SUM(CASE WHEN wr.status = 'completed' THEN )`
         );
 
     } catch (err) {
