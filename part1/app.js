@@ -49,7 +49,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
 app.get('/api/walkers/summary', async (req, res) => {
     try {
         const[walkerSummaryRows] = await pool.query(
-            `SELECT u.username `
+            `SELECT u.username AS walker_username,
+                    COUNT()`
         );
 
     } catch (err) {
