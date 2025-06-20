@@ -66,6 +66,3 @@ app.get('/api/walkers/summary', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log('')
-});
