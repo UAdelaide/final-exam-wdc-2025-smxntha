@@ -28,4 +28,4 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
-// GET 
+// GET: Open walk requests 
