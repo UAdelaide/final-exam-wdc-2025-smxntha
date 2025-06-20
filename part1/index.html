@@ -35,7 +35,13 @@
 
     <script>
         const { createApp } = Vue;
-        createApp
+        createApp({
+            data() {
+                return {
+                    dogImg: ''
+                }; 
+            }
+        })
     </script>
 </body>
 </html>
