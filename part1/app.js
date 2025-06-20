@@ -13,6 +13,7 @@ const pool = mysql.createPool({
 });
 
 app.use(express.json());
+app.use(express.static('public'));
 
 // GET: List of all dogs (name and size_ and ownder username)
 app.get('/api/dogs', async (req, res) => {
