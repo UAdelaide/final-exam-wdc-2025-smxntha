@@ -29,7 +29,7 @@ app.get('/api/dogs', async (req, res) => {
 });
 
 // GET: Open walk requests, include dog name, requested time, location and owner username
-app.get('/api/walkrequests/open', async (req, res) {
+app.get('/api/walkrequests/open', async (req, res) => {
     try {
         const [openReqRows] = await pool.query(
             `SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr. location,
@@ -48,4 +48,4 @@ app.get('/api/walkrequests/open', async (req, res) {
 // GET: Walker summaries w/ average rating and no. of completed walks
 app.get('/api/walkers/summary', async (req, res) {
 
-}); 
+});
