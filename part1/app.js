@@ -50,7 +50,7 @@ app.get('/api/walkers/summary', async (req, res) => {
     try {
         const[walkerSummaryRows] = await pool.query(
             `SELECT u.username AS walker_username,
-                    COUNT()`
+                    COUNT(rt.rating)`
         );
 
     } catch (err) {
