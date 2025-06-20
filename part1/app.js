@@ -24,6 +24,6 @@ app.get('/api/dogs', async (req, res) => {
         );
         res.json(dogRows);
     } catch (err) {
-        res.status(500).json({})
+        res.status(500).json({ error: })
     }
 });
