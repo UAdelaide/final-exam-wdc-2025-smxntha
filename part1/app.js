@@ -17,11 +17,11 @@ app.use(express.json());
 // GET: List of all dogs (name and size_ and ownder username)
 app.get('/api/dogs', async (req, res) => {
     try {
-        const [rows] = await pool.query(
+        const [dogRows] = await pool.query(
             `SELECT d.name AS dog_name, d.size, u.username AS owner_username
             FROM Dogs d
             JOIN Users u ON d.owner_id = u.user_id;`
         );
-        res.json(rows)
+        res.json(dogRows); 
     } catch (err)
 });
