@@ -11,4 +11,4 @@ const pool = mysql.createPool({
     database: 'DogWalkService'
 });
 
-app.use(express.json()); 
+app.use(express.json());
