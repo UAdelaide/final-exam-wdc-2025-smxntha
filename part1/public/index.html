@@ -28,7 +28,7 @@
     <div id="app">
         <h1>Dog of the Day!</h1>
         <div class="dog-pic">
-            <img v-if="do":src="dogImg" alt="">
+            <img v-if="dogImg" :src="dogImg" alt="">
             <button type="button" @click="getNewDog">Another One!</button>
         </div>
     </div>
