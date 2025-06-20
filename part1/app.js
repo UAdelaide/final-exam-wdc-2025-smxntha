@@ -31,7 +31,7 @@ app.get('/api/dogs', async (req, res) => {
 app.get('/api/walkrequests/open', async (req, res) => {
     try {
         const [openReqRows] = await pool.query(
-            `SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr. location,
+            `SELECT wr.request_id, d.name AS dog_name, wr.requested_time, wr.duration_minutes, wr.location,
             u.username AS owner_username
             FROM WalkRequests wr
             JOIN Dogs d ON wr.dog_id = d.dog_id
@@ -53,7 +53,7 @@ app.get('/api/walkers/summary', async (req, res) => {
                     ROUND(AVG(rt.rating_int), 1) AS average_rating,
                     SUM(CASE WHEN wr.status = 'completed' THEN 1 ELSE 0 END) AS num_completed
                     FROM Users u
-                    LEFT JOIN WalkApplication wa ON u.user_id = wa.walker_id
+                    LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id
                     LEFT JOIN WalkRequests wr ON wa.request_id = wr.request_id
                     LEFT JOIN WalkRatings rt ON rt.walker_id = u.user_id
                     WHERE u.role = 'walker'
