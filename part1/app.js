@@ -60,9 +60,8 @@ app.get('/api/walkers/summary', async (req, res) => {
                     WHERE u.role = 'walker'
                     GROUP by u.user_id;`
         );
-        res.json(walkerSummaryRows
-        )
+        res.json(walkerSummaryRows);
     } catch (err) {
-
+        res.status(500).json()
     }
 });
