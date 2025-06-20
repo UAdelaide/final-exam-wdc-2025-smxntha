@@ -51,7 +51,8 @@ app.get('/api/walkers/summary', async (req, res) => {
         const[walkerSummaryRows] = await pool.query(
             `SELECT u.username AS walker_username,
                     COUNT(rt.rating_id) AS num_ratings,
-                    ROUND(AVG(rt.rating_int), 1) AS average_rating`
+                    ROUND(AVG(rt.rating_int), 1) AS average_rating,
+                    SUM(CASE WHEN wr.status)`
         );
 
     } catch (err) {
