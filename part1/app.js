@@ -28,4 +28,4 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
-// GET: Open walk requests 
+// GET: Open walk requests, include dog name, requested time, location and owner username
