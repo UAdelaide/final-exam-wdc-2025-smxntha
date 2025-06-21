@@ -13,7 +13,7 @@ router.post('/login', async (req, res) => {
         );
 
         if (userRows.length === 0) {
-            
+            return res,status(401).jason({ error: 'Use'})
         }
     } catch (err) {
 
