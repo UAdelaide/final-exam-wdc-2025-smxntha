@@ -7,7 +7,9 @@ const app = express();
 const session = require('express-session');
 
 app.use(session({
-    secret: dogWalkerSecret, // hardcode 
+    secret: dogWalkerSecret, // hardcode
+    resave: false,
+    saveUninitialized
 }))
 
 // Middleware
