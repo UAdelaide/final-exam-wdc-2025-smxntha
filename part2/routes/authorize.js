@@ -5,8 +5,10 @@ const bcrypt = require('bcrypt'); // for password hashing
 
 // POST: login
 router.post('/login', async (req, res) => {
-    try {
+    const { username, password } = req.body;
 
+    try {
+        const 
     } catch (err) {
 
     }
