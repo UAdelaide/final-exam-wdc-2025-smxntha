@@ -20,7 +20,7 @@ router.post('/login', async (req, res) => {
         const user = userRows[0];
 
 
-        if (!match) {
+        if (user.password !== ) {
             return res.status(401).json({ error: 'Invalid username or password' });
         }
 
