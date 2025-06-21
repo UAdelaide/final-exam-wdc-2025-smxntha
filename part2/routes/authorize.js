@@ -20,7 +20,9 @@ router.post('/login', async (req, res) => {
         const user = rows[0];
         const match = await bycrypt.compare(password, user.password_hash);
 
-        if (!match) 
+        if (!match) {
+            return res.status(401)/json({ error: 'Invalid password. '});
+        }
     } catch (err) {
 
     }
