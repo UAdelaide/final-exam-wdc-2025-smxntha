@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-//
+/* -- SESSION SET UP 
 
 // Middleware
 app.use(express.json());
