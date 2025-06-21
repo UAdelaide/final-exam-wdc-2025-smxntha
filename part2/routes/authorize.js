@@ -8,7 +8,9 @@ router.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
     try {
-        const [userRows] = await db.query('SELECT * FROM Uses')
+        const [userRows] = await db.query('SELECT * FROM Users WHERE username = ?',
+            [username]
+        ); 
     } catch (err) {
 
     }
