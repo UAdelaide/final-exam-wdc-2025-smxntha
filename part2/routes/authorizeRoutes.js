@@ -16,9 +16,9 @@ router.post('/login', async (req, res) => {
             return res.status(401).json({ error: 'Username not found.' });
         }
 
-        // check if passwords match
+        // check if passwords match, since passwords are hardcoded 
         const user = userRows[0];
-        const match = await bcrypt.compare(password, user.password_hash);
+
 
         if (!match) {
             return res.status(401).json({ error: 'Invalid password. '});
