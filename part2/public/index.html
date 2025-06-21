@@ -52,7 +52,7 @@
       // store response
       const result = await res.json()
 
-      // redirect according to response
+      // redirect according to role
       if (res.ok) {
         // if owner - login to owner dashboard, else to walker dashboard
         window.location.href = result.role === 'owner' ? '/owner-dashboard.html'
