@@ -24,7 +24,7 @@ const authRoutes = require('./routes/authorizeRoutes'); // add route for authori
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
-
+app.use('/login')
 
 // Export the app instead of listening here
 module.exports = app;
