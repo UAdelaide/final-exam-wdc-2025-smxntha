@@ -81,7 +81,10 @@
             }
           }
 
-          dogs.value = data; 
+          dogs.value = data;
+        } catch (err) {
+          console.erorr(err);
+          error.value = err.message; 
         }
 
         )}
