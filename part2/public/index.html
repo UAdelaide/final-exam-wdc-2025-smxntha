@@ -72,7 +72,9 @@
             // fetch a random photo for each dog
             for (let dog of data) {
               const imageRes = await fetch('https://dog.ceo/api/breeds/image/random');
+              const imageData = await imageRes.json();
               
+              dog.ima
             }
           }
         }
