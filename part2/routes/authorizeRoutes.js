@@ -13,10 +13,10 @@ router.post('/login', async (req, res) => {
 
         // if username not found
         if (userRows.length === 0) {
-            return res.status(401).json({ error: 'Username not found.' });
+            return res.status(401).json({ error: 'Invalid username or password' });
         }
 
-        // check if passwords match, since passwords are hardcoded 
+        // check if passwords match, since passwords are hardcoded
         const user = userRows[0];
 
 
