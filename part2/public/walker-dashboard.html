@@ -63,6 +63,9 @@
             const res = await fetch('/api/users/me');
 
             if(!res.ok) throw new Error('Fialed to get user information.');
+
+            const user = await res.json();
+            return user.user_id; 
           }
         }
         async function applyToWalk(requestId) {
