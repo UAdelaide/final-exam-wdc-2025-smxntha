@@ -29,11 +29,11 @@ router.post('/register', async (req, res) => {
 });
 
 router.get('/me', (req, res) => {
-  if (!req.session.user) {
+  if (!req.session.userID) {
     return res.status(401).json({ error: 'Not logged in' });
   }
   res.json({
-    user_id: req.session.userID, 
+    user_id: req.session.userID,
     role: req.session.role });
 });
 
