@@ -96,9 +96,10 @@
             const res = await fetch('/api/dogs/mine');
             ownerDogs.value = await res.json();
           } catch (err) {
-            consple
+            console.error('Failed to load user dogs', err);
           }
         }
+
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
@@ -135,6 +136,7 @@
         }
 
         onMounted(() => {
+          loadOwnerDogs();
           loadWalks();
         });
 
