@@ -132,7 +132,9 @@
     }).mount('#app');
 
     // for logout functionality:
-    document.getElementById('logoutBtn').addEventListener('click', as)
+    document.getElementById('logoutBtn').addEventListener('click', async() => {
+      await fetch('/auth/logout')
+    })
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
