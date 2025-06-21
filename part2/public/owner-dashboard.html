@@ -11,8 +11,9 @@
   <div id="app" class="container py-4">
     <div class="d-flex justify-content-between align-items center mb-4">
       <h1 class="mb-0 text-primary">Owner Dashboard</h1>
-      <button id="logoutBtn" class="btn btn-danger">Logout</button>
+      <button id="logoutBtn" class="btn btn-outline-danger">Logout</button> <!-- Logout button -->
     </div>
+
     <!-- Walk request form -->
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
@@ -133,7 +134,7 @@
 
     // for logout functionality:
     document.getElementById('logoutBtn').addEventListener('click', async() => {
-      
+
       // send request to logout route
       await fetch('/auth/logout',
         { method: 'POST' }
