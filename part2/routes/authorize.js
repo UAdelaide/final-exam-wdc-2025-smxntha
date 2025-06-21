@@ -28,6 +28,9 @@ router.post('/login', async (req, res) => {
         // if login successful:
 
         // store session
+        req.session.userID = user.user_id;
+        req.session.role = user.role;
+
         
     } catch (err) {
 
