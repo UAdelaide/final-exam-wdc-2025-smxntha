@@ -3,7 +3,12 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-/* -- SESSION SET UP 
+/* -- SESSION SET UP --  */
+const session = require('express-session');
+
+app.use(session({
+    secret: 
+}))
 
 // Middleware
 app.use(express.json());
