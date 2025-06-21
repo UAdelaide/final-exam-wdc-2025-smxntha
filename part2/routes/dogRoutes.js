@@ -16,6 +16,7 @@ router.get('/owned', async (req, res) => {
             [ownerId]);
         res.json(dogs);
     } catch (err) {
-        console.error(;)
+        console.error('Error fetching user dogs', err); 
+        
     }
 });
