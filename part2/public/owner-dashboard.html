@@ -26,7 +26,7 @@
             <!-- Modify ownder dog field -->
             <select v-model="form.dog_id" class="form-select" required>
               <option disabled value="">-- Choose a dog --</option>
-              <option v-for="dog in userDogs" :key="dog.dog_id" :value="dog.dog_id">
+              <option v-for="dog in ownerDogs" :key="dog.dog_id" :value="dog.dog_id">
                 {{ dog.name }}
               </option>
           </div>
@@ -91,8 +91,8 @@
         // to load user's dogs:
         const userDogs = ref([]);
 
-        async function loadUserDogs() {
-          
+        async function loadOwnerDogs() {
+
         }
         async function loadWalks() {
           try {
