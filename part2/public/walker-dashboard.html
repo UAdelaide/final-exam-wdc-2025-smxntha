@@ -64,7 +64,7 @@
             if(!res.ok) throw new Error('Failed to get user information.');
 
             const user = await res.json();
-            return user;
+            return user.user_id;
           } catch (err) {
             console.error(err);
             return null;
