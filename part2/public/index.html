@@ -54,7 +54,10 @@
   </div>
 
   <script>
-    const {create}
+    const { createApp, ref, onMounted } = Vue;
+
+    createApp({
+      setup() {
     // submit listener for login form
     document.getElementById('loginForm').addEventListener('submit', async(e) => {
       e.preventDefault();
