@@ -26,8 +26,12 @@
       const form = new FormData(e.target);
       const data = {
         username: form.get('username'),
-        passow
-      }
+        password: form.get('password')
+      };
+
+      const res = await fetch('/login', {
+        
+      })
     });
   </script>
 
