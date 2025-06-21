@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 
-// 13. POST: Login
+// POST: Login
 router.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
@@ -38,7 +38,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// 14. POST: Logout
+// POST: Logout
 router.post('/logout', (req, res) => {
     req.session.destroy(err => {
         if (err) {
@@ -47,7 +47,7 @@ router.post('/logout', (req, res) => {
         }
 
         res.clearCookie('connect.sid'); // clear the session cookie
-        res.redirect('/'); // redirect back to login page 
+        res.redirect('/'); // redirect back to login page
     })
 });
 
