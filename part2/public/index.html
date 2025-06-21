@@ -79,7 +79,7 @@
                 console.error('Failed to fetch image.', imageErr);
                 dog.image = ''; // add a fallback
               }
-          }
+            }
 
           dogs.value = data;
         } catch (err) {
@@ -96,6 +96,7 @@
         dogs,
         error
       };
+
     }).mount('#app');
     // submit listener for login form
     document.getElementById('loginForm').addEventListener('submit', async(e) => {
