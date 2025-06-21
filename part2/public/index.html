@@ -69,8 +69,10 @@
             if (!res.ok) throw new Error('Failed to load all registered dogs');
             const data = await res.json();
 
-            // fetch a random photogfor each registered dog
-            
+            // fetch a random photo for each dog
+            for (let dog of data) {
+              const
+            }
           }
         }
 
