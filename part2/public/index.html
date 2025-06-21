@@ -66,7 +66,10 @@
           try {
             const res = await fetch ('/api/dogs');
 
-            if (!res.ok) throw 
+            if (!res.ok) throw new Error('Failed to load all registered dogs');
+            const data = await res.json();
+            
+            
           }
         }
 
