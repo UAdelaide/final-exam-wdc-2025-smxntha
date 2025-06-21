@@ -89,6 +89,16 @@
         };
       }
     }).mount('#app');
+
+    // for logout functionality:
+    document.getElementById('logoutBtn').addEventListener('click', async() => {
+
+      // send request to logout route
+      await fetch('/auth/logout',
+        { method: 'POST' }
+      );
+      window.location.href ='/'; // redirect to login
+    })
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
