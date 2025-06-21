@@ -16,11 +16,10 @@ router.post('/login', async (req, res) => {
             return res.status(401).json({ error: 'Invalid username or password' });
         }
 
-        // check if passwords match, since passwords are hardcoded
+        // check if passwords match, since passwords are hardcoded, just do simpl
         const user = userRows[0];
 
-
-        if (user.password !== ) {
+        if (user.password !== password) {
             return res.status(401).json({ error: 'Invalid username or password' });
         }
 
