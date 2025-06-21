@@ -133,7 +133,8 @@
 
     // for logout functionality:
     document.getElementById('logoutBtn').addEventListener('click', async() => {
-      // 
+      
+      // send request to logout route
       await fetch('/auth/logout',
         { method: 'POST' }
       );
