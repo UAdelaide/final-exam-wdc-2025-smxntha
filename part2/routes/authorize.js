@@ -12,8 +12,9 @@ router.post('/login', async (req, res) => {
             [username]
         );
 
+        // if i
         if (userRows.length === 0) {
-            return res,status(401).jason({ error: 'Use'})
+            return res.status(401).jason({ error: 'Username not found.' });
         }
     } catch (err) {
 
