@@ -21,11 +21,12 @@ app.use(express.static(path.join(__dirname, '/public')));
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authorizeRoutes'); // add route for authorizations
-const dogRoutes = require('.')
+const dogRoutes = require('./routes/dogRoutes'); // add route for user dogs 
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 app.use('/auth', authRoutes); // mount for logins
+
 
 // Export the app instead of listening here
 module.exports = app;
