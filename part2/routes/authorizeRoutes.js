@@ -14,7 +14,7 @@ router.post('/login', async (req, res) => {
 
         // if username not found
         if (userRows.length === 0) {
-            return res.status(401).jason({ error: 'Username not found.' });
+            return res.status(401).json({ error: 'Username not found.' });
         }
 
         // check if passwords match
