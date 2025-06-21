@@ -21,9 +21,11 @@
   </div>
 
   <script>
-    // 
+    // submit listener for login form
     document.getElementById('loginForm').addEventListener('submit', async(e) => {
       e.preventDefault();
+
+      // get 
       const form = new FormData(e.target);
       const data = {
         username: form.get('username'),
