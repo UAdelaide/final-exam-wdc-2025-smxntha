@@ -133,10 +133,11 @@
 
     // for logout functionality:
     document.getElementById('logoutBtn').addEventListener('click', async() => {
+      
       await fetch('/auth/logout',
         { method: 'POST' }
-      ); 
-      wind
+      );
+      window.location.href ='/'; // redirect to login
     })
   </script>
 
