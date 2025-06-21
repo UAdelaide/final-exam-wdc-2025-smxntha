@@ -32,7 +32,9 @@ router.get('/me', (req, res) => {
   if (!req.session.user) {
     return res.status(401).json({ error: 'Not logged in' });
   }
-  res.json({ user_id: req.session.userID, role: req.session.role }); 
+  res.json({
+    user_id: req.session.userID, 
+    role: req.session.role });
 });
 
 module.exports = router;
