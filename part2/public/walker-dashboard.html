@@ -75,12 +75,12 @@
         // instead of requestId, take in walkId
         async function applyToWalk(walkId) {
           const walkderId = getCurrentUser(); // use the function to get the current logged in user
-          if (!walkerId) return; // ensure there is a walker ID. 
+          if (!walkerId) return; // ensure there is a walker ID.
           try {
-            const res = await fetch(`/api/walks/${requestId}/apply`, {
+            const res = await fetch(`/api/walks/${walkId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ walker_id: user })
+              body: JSON.stringify({ walker_id: user.user_id })
             });
             const result = await res.json();
 
