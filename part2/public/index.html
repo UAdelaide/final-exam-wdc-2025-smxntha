@@ -81,24 +81,24 @@
               }
             }
 
-          dogs.value = data;
-        } catch (err) {
-          console.erorr(err);
-          error.value = err.message;
+            dogs.value = data;
+          } catch (err) {
+            console.erorr(err);
+            error.value = err.message;
+          }
         }
-      }
 
-      onMounted() => {
-        loadAllDogs();
-      }
+        onMounted() => {
+          loadAllDogs();
+        }
 
-      return {
-        dogs,
-        error
-      };
+        return {
+          dogs,
+          error
+        };
       }
-
     }).mount('#app');
+    
     // submit listener for login form
     document.getElementById('loginForm').addEventListener('submit', async(e) => {
       e.preventDefault();
