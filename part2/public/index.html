@@ -71,14 +71,14 @@
 
             // fetch a random photo for each dog from DOG API
             for (let dog of data) {
+              try {
               const imageRes = await fetch('https://dog.ceo/api/breeds/image/random');
               const imageData = await imageRes.json();
               dogImg = imageData.message;
-
-            } catch (imageErr) { // if failed to get an image
-              console.error('Failed to fetch image.', imageErr);
-              dog.image = ''; // add a fallback
-            }
+              } catch (imageErr) { // if failed to get an image
+                console.error('Failed to fetch image.', imageErr);
+                dog.image = ''; // add a fallback
+              }
           }
 
           dogs.value = data;
