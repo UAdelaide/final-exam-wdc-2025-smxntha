@@ -8,7 +8,8 @@ router.get('/', async (req,res) => {
         const [allDogs] = await db.query('SELECT dog_id, name, size FROM Dogs');
         res.json(allDogs);
     } catch (err) {
-        console.error('Error fetching registered dogs:', e)
+        console.error('Error fetching registered dogs:', err);
+        res.status(500).json({ error: 'Failed to load '})
     }
 });
 // GET: Dogs owned by the logged in user
