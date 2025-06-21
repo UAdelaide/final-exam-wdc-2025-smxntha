@@ -12,6 +12,7 @@ router.get('/', async (req,res) => {
         res.status(500).json({ error: 'Failed to load registered dogs.' });
     }
 });
+
 // GET: Dogs owned by the logged in user
 router.get('/owned', async (req, res) => {
     const ownerId = req.session.userID;
