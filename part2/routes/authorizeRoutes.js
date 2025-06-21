@@ -19,7 +19,7 @@ router.post('/login', async (req, res) => {
         // check if passwords match, since passwords are hardcoded, just do string comparison
         const user = userRows[0];
 
-        if (user.password !== password) {
+        if (user.password_hash !== password) {
             return res.status(401).json({ error: 'Invalid username or password' });
         }
 
