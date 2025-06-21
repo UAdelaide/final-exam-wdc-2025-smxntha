@@ -68,10 +68,10 @@
             return user.user_id;
           } catch (err) {
             console.error(err);
-            return null; 
+            return null;
           }
         }
-        async function applyToWalk(requestId) {
+        async function applyToWalk(walkId) {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
