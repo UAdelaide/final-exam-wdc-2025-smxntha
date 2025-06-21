@@ -5,9 +5,8 @@ const db = require('../models/db');
 // GET: Registered dogs
 router.get('/', async (req,res) => {
     try {
-        const [dogs] = await db.query(
-            'SELECT '
-        )
+        const [akkdogs] = await db.query('SELECT dog_id, name, size FROM Dogs');
+        rs.
     }
 });
 // GET: Dogs owned by the logged in user
