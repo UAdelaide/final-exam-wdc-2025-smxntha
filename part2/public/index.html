@@ -32,7 +32,8 @@
       <div v-if="dogs.length > 0" class="row">
         <div class="col-md-4 mb-4" v-for="dog in dogs" :key="dog.dog_id">
           <div class="card h-100">
-            <img :src="dog"
+            <img :src="dogImg" class="card-img-top" alt="Photo of a dog"/>
+            
       </div>
     </div>
   </div>
