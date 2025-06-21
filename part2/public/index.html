@@ -23,7 +23,10 @@
   <script>
     document.getElementById('loginForm').addEventListener('submit', async(e) => {
       e.preventDefault();
-      const form = newFormData(e.target)
+      const form = new FormData(e.target);
+      const data = {
+
+      }
     });
   </script>
 
