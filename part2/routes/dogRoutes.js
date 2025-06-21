@@ -20,3 +20,5 @@ router.get('/owned', async (req, res) => {
         res.status(500).json({ error: 'Failed to load user dogs.' });
     }
 });
+
+modules.exports = router;
