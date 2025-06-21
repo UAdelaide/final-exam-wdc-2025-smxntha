@@ -16,6 +16,9 @@ router.post('/login', async (req, res) => {
         if (userRows.length === 0) {
             return res.status(401).jason({ error: 'Username not found.' });
         }
+
+        const user = rows[0];
+        const match = await bycrypt.compare
     } catch (err) {
 
     }
