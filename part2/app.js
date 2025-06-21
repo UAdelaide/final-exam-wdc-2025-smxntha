@@ -3,6 +3,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
+
 /* -- SESSION SET UP --  */
 const session = require('express-session');
 
