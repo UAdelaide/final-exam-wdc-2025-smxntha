@@ -71,12 +71,12 @@
           }
         }
 
-        async function applyToWalk(walkId) {
+        async function applyToWalk(requestId) {
           const walker = await getCurrentUser(); // use the function to get the current logged in user
           if (!walker) return; // ensure it is a walker
 
           try {
-            const res = await fetch(`/api/walks/${walkId}/apply`, {
+            const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ walker_id: walker.user_id }) // use right key
