@@ -46,7 +46,7 @@
               <td>{{ dog.name }}</td>
               <td>{{ dog.size }}</td>
               <td>{{ dog.owner_id }}</td>
-              <td><img :src="dogImg" alt="Image of a dog" width="60"/></td>
+              <td><img :src="dog.image" alt="Image of a dog" width="60"/></td>
             </tr>
           </tbody>
         </table>
@@ -75,7 +75,7 @@
               try {
               const imageRes = await fetch('https://dog.ceo/api/breeds/image/random');
               const imageData = await imageRes.json();
-              dogImg = imageData.message;
+              dog.image = imageData.message;
               } catch (imageErr) { // if failed to get an image
                 console.error('Failed to fetch image.', imageErr);
                 dog.image = ''; // add a fallback
