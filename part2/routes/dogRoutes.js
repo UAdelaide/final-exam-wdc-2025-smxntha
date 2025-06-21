@@ -7,6 +7,6 @@ router.get('/owned', async (req, res) => {
     const ownerId = req.session.userID;
 
     if (!ownerId) {
-        return re
+        return res.status(401).json({ error: 'Unauthorized user. '});
     }
 });
