@@ -25,13 +25,14 @@
     document.getElementById('loginForm').addEventListener('submit', async(e) => {
       e.preventDefault();
 
-      // get 
+      // get data from user input
       const form = new FormData(e.target);
       const data = {
         username: form.get('username'),
         password: form.get('password')
       };
 
+      // sent POST request to 
       const res = await fetch('/login', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
