@@ -48,7 +48,7 @@ router.post('/logout', (req, res) => {
 
         res.clearCookie('connect.sid'); // clear the session cookie
         res.redirect('/'); // redirect back to login page
-    }); 
+    });
 });
 
 module.exports = router;
