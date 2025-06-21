@@ -21,7 +21,7 @@ router.post('/login', async (req, res) => {
 
 
         if (!match) {
-            return res.status(401).json({ error: 'Invalid password. '});
+            return res.status(401).json({ error: 'Invalid username or password' });
         }
 
         // if login successful:
