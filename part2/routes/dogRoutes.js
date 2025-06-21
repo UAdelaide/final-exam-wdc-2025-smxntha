@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../models/db');
 
 // GET: Registered dogs
-router
+router.get('/', async ( req,res) => {})
 // GET: Dogs owned by the logged in user
 router.get('/owned', async (req, res) => {
     const ownerId = req.session.userID;
