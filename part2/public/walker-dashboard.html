@@ -65,7 +65,10 @@
             if(!res.ok) throw new Error('Fialed to get user information.');
 
             const user = await res.json();
-            return user.user_id; 
+            return user.user_id;
+          } catch (err) {
+            console.error(err);
+            return null; 
           }
         }
         async function applyToWalk(requestId) {
