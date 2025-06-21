@@ -60,7 +60,11 @@
 
         async function getCurrentUser() {
           try {
-            const res = await fetch('/api/users/me ')
+            const res = await fetch('/api/users/me');
+
+            if(!res.ok) {
+              throw new Error('Failed to ')
+            }
           }
         }
         async function applyToWalk(requestId) {
