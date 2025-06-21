@@ -10,7 +10,11 @@ router.post('/login', async (req, res) => {
     try {
         const [userRows] = await db.query('SELECT * FROM Users WHERE username = ?',
             [username]
-        ); 
+        );
+
+        if (userRows.length === 0) {
+            
+        }
     } catch (err) {
 
     }
