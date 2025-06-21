@@ -86,6 +86,11 @@
           console.erorr(err);
           error.value = err.message;
         }
+      }
+
+      onMounted() => {
+        loadAllDogs()
+      }
 
 
     }).mount('#app');
