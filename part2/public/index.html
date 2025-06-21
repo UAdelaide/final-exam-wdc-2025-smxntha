@@ -69,14 +69,15 @@
             if (!res.ok) throw new Error('Failed to load all registered dogs');
             const data = await res.json();
 
-            // fetch a random photo for each dog
+            // fetch a random photo for each dog from t
             for (let dog of data) {
               const imageRes = await fetch('https://dog.ceo/api/breeds/image/random');
               const imageData = await imageRes.json();
               dogImg = imageData.message;
-            } catch (imageErr) {
+
+            } catch (imageErr) { // if failed to get an image
               console.error('Failed to fetch image.', imageErr);
-              do
+              dog.image = ''; // add a fallback
             }
           }
         }
