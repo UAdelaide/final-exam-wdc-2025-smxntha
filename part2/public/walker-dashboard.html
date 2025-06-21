@@ -64,7 +64,7 @@
             if(!res.ok) throw new Error('Failed to get user information.');
 
             const user = await res.json();
-            return user.user_id;
+            return user;
           } catch (err) {
             console.error(err);
             return null;
@@ -73,8 +73,8 @@
 
         // instead of requestId, take in walkId
         async function applyToWalk(walkId) {
-          const walkerId = getCurrentUser(); // use the function to get the current logged in user
-          if (!walkerId) return; // ensure there is a walker ID.
+          const walker = getCurrentUser(); // use the function to get the current logged in user
+          if (!walker) return; // ensure it is a walker
 
           try {
             const res = await fetch(`/api/walks/${walkId}/apply`, {
