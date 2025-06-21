@@ -16,7 +16,7 @@ router.post('/login', async (req, res) => {
             return res.status(401).json({ error: 'Invalid username or password' });
         }
 
-        // check if passwords match, since passwords are hardcoded, just do string comparison 
+        // check if passwords match, since passwords are hardcoded, just do string comparison
         const user = userRows[0];
 
         if (user.password !== password) {
@@ -30,7 +30,7 @@ router.post('/login', async (req, res) => {
         req.session.role = user.role;
 
         // redirect user accordingly
-        res.json({ message: 'Login was successful', role: user.role });
+        res.json({ role: user.role });
 
     } catch (err) {
         console.error(err);
