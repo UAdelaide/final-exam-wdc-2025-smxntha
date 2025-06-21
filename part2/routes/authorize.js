@@ -12,7 +12,7 @@ router.post('/login', async (req, res) => {
             [username]
         );
 
-        // if i
+        // if username not found
         if (userRows.length === 0) {
             return res.status(401).jason({ error: 'Username not found.' });
         }
