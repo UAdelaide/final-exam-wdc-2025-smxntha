@@ -71,7 +71,10 @@
             return null;
           }
         }
+
+        // instead of requestId, take in walkId
         async function applyToWalk(walkId) {
+          const walkderId = 
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
