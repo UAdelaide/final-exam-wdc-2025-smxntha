@@ -9,4 +9,10 @@ router.get('/owned', async (req, res) => {
     if (!ownerId) {
         return res.status(401).json({ error: 'Unauthorized user. '});
     }
+
+    try {
+        const [dogs] = await db.query(
+            'SELECT * FROM DOG'
+        )
+    }
 });
