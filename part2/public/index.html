@@ -58,7 +58,7 @@
 
     createApp({
       setup() {
-        const registeredDogs = ref([];
+        const registeredDogs = ref([]);
         const error = ref('');
 
         // load all the registered dogs and attach a random dog photo
@@ -84,10 +84,10 @@
           dogs.value = data;
         } catch (err) {
           console.erorr(err);
-          error.value = err.message; 
+          error.value = err.message;
         }
 
-        )}
+
     }).mount('#app');
     // submit listener for login form
     document.getElementById('loginForm').addEventListener('submit', async(e) => {
