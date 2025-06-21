@@ -39,8 +39,12 @@
         body: JSON.stringify(data)
       });
 
-      // store response 
+      // store response
       const result = await res.json()
+
+      if (res.ok) {
+        
+      }
     });
   </script>
 
