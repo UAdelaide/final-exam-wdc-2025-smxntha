@@ -80,7 +80,7 @@
             const res = await fetch(`/api/walks/${walkId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ walker_id: user.user_id }) // use right key
+              body: JSON.stringify({ walker_id: walker.user_id }) // use right key
             });
             const result = await res.json();
 
