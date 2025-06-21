@@ -58,11 +58,12 @@
           }
         }
 
+        // get the current logged in user from backend.
         async function getCurrentUser() {
           try {
             const res = await fetch('/api/users/me');
 
-            if(!res.ok) throw new Error('Fialed to get user information.');
+            if(!res.ok) throw new Error('Failed to get user information.');
 
             const user = await res.json();
             return user;
