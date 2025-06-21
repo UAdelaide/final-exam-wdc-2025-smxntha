@@ -22,7 +22,8 @@
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', async(e) => {
-
+      e.preventDefault();
+      const form = newFormData(e.target)
     });
   </script>
 
