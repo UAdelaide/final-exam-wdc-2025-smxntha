@@ -9,7 +9,7 @@ router.get('/', async (req,res) => {
         res.json(allDogs);
     } catch (err) {
         console.error('Error fetching registered dogs:', err);
-        res.status(500).json({ error: 'Failed to load '})
+        res.status(500).json({ error: 'Failed to load registered dogs.' });
     }
 });
 // GET: Dogs owned by the logged in user
