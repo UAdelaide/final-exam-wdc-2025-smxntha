@@ -9,47 +9,48 @@
 </head>
 <body class="bg-light">
   <div id="app">
-  <div class="d-flex justify-content-center align-items center min-vh-100">
-    <div style="width: 100%; max-width: 500px;">
+    <div class="d-flex justify-content-center align-items center min-vh-100">
+      <div style="width: 100%; max-width: 500px;">
 
-      <h1 class="mb-4 mt-5 text-primary">Welcome to the Dog Walking Service!</h1>
+        <h1 class="mb-4 mt-5 text-primary">Welcome to the Dog Walking Service!</h1>
 
-      <!-- Add  a login form -->
-      <form id="loginForm" class="mb-5" style="max-width: 400px;">
-        <div class="row g-2 align-items-center mb-3">
-          <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" name="username" class="form-control" id="username" required/>
+        <!-- Add  a login form -->
+        <form id="loginForm" class="mb-5" style="max-width: 400px;">
+          <div class="row g-2 align-items-center mb-3">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" name="username" class="form-control" id="username" required/>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" name="password" class="form-control" id="password" required/>
+            </div>
+              <button type="submit" class="btn btn-primary w-auto">Log In</button>
           </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" name="password" class="form-control" id="password" required/>
-          </div>
-            <button type="submit" class="btn btn-primary w-auto">Log In</button>
-        </div>
-      </form>
+        </form>
 
-      <!-- Show registered dogs in a table (info plus random dog photo)-->
-       <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Dog ID</th>
-            <th>Name</th>
-            <th>Size</th>
-            <th>Owner ID</th>
-            <th>Photo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="dog in dogs" :key="dog.dog_id">
-            <td>{{ dog.dog_id }}</td>
-            <td>{{ dog.name }}</td>
-            <td>{{ dog.size }}</td>
-            <td>{{ dog.owner_id }}</td>
-            <td><img :src="dogImg" alt="Image of a dog" width="60"/></td>
-          </tr>
-        </tbody>
-       </table>
+        <!-- Show registered dogs in a table (info plus random dog photo)-->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Dog ID</th>
+              <th>Name</th>
+              <th>Size</th>
+              <th>Owner ID</th>
+              <th>Photo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="dog in dogs" :key="dog.dog_id">
+              <td>{{ dog.dog_id }}</td>
+              <td>{{ dog.name }}</td>
+              <td>{{ dog.size }}</td>
+              <td>{{ dog.owner_id }}</td>
+              <td><img :src="dogImg" alt="Image of a dog" width="60"/></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
