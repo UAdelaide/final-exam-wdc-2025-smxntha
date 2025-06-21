@@ -69,7 +69,7 @@
             if (!res.ok) throw new Error('Failed to load all registered dogs');
             const data = await res.json();
 
-            // fetch a random photo for each dog from t
+            // fetch a random photo for each dog from DOG API
             for (let dog of data) {
               const imageRes = await fetch('https://dog.ceo/api/breeds/image/random');
               const imageData = await imageRes.json();
