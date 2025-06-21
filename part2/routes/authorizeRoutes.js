@@ -18,7 +18,7 @@ router.post('/login', async (req, res) => {
         }
 
         // check if passwords match
-        const user = rows[0];
+        const user = userRows[0];
         const match = await bycrypt.compare(password, user.password_hash);
 
         if (!match) {
