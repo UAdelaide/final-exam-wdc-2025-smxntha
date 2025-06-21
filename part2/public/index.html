@@ -63,7 +63,11 @@
 
         // load all the registered dogs and attach a random dog photo
         async function loadAllDogs() {
-          
+          try {
+            const res = await fetch ('/api/dogs');
+
+            if (!res.ok) throw 
+          }
         }
 
         )}
