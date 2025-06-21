@@ -26,7 +26,8 @@
             <!-- Modify ownder dog field -->
             <select v-model="form.dog_id" class="form-select" required>
               <option disabled value="">-- Choose a dog --</option>
-              <option v-for="dog in userDogs" :key="dog.dog_id" :value="dog.dog_id"
+              <option v-for="dog in userDogs" :key="dog.dog_id" :value="dog.dog_id">
+                {{ dog.}}
           </div>
           <div class="mb-3">
             <label class="form-label">Requested Date & Time</label>
