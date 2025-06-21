@@ -89,9 +89,14 @@
       }
 
       onMounted() => {
-        loadAllDogs()
+        loadAllDogs();
       }
 
+      return {
+        dogs,
+        error
+      };
+    }
 
     }).mount('#app');
     // submit listener for login form
