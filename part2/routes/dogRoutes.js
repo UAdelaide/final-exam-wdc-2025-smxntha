@@ -4,5 +4,9 @@ const db = require('../models/db');
 
 // GET: Dogs owned by the logged in user
 router.get('/owned', async (req, res) => {
-    const ownerId = r
+    const ownerId = req.session.userID;
+
+    if (!ownerId) {
+        return re
+    }
 });
