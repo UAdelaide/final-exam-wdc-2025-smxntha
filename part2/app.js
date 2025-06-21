@@ -25,7 +25,7 @@ const dogRoutes = require('./routes/dogRoutes'); // add route for user dogs
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
-app.use('/auth', authRoutes); // for login/logout
+app.use('/auth', authRoutes); 
 app.use('/api/dogs', dogRoutes);
 
 // Export the app instead of listening here
