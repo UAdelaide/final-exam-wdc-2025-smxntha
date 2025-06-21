@@ -14,7 +14,7 @@
     <h1 class="mb-4 text-primary">Welcome to the Dog Walking Service!</h1>
 
     <!-- Add  a login form -->
-    <form id="loginForm">
+    <form id="loginForm" class="mb-5">
       <input type="text" name="username" placeholder="Username"/>
       <input type="password" name="password" placeholder="Password"/>
     </form>
@@ -47,7 +47,7 @@
         window.location.href = result.role === 'owner' ? '/owner-dashboard.html'
         : '/walker-dashboard.html';
       } else {
-        alert('Login unsuccessful'); 
+        alert('Login unsuccessful');
       }
     });
   </script>
