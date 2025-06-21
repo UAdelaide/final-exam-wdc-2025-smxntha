@@ -73,7 +73,7 @@
 
         // instead of requestId, take in walkId
         async function applyToWalk(walkId) {
-          console.log('')
+          console.log('clicked', walkId);
           const walker = await getCurrentUser(); // use the function to get the current logged in user
           if (!walker) return; // ensure it is a walker
 
