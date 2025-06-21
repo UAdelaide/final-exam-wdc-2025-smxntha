@@ -44,7 +44,8 @@
 
       // redirect according to response
       if (res.ok) {
-        window.location.href = result.role === 'owner' ? ''
+        window.location.href = result.role === 'owner' ? '/owner-dashboard.html'
+        : '/'
       }
     });
   </script>
