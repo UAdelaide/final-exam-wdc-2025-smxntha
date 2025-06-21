@@ -7,7 +7,7 @@ router.get('/owned', async (req, res) => {
     const ownerId = req.session.userID;
 
     if (!ownerId) {
-        return res.status(401).json({ error: 'Unauthorized user. '});
+        return res.status(401).json({ error: 'Unauthorized user.' });
     }
 
     try {
@@ -16,7 +16,7 @@ router.get('/owned', async (req, res) => {
             [ownerId]);
         res.json(dogs);
     } catch (err) {
-        console.error('Error fetching user dogs', err); 
-        
+        console.error('Error fetching user dogs', err);
+        res.status(500).json({ error: 'Failed to load user dogs.' });
     }
 });
