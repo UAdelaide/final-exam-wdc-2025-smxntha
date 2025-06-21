@@ -21,4 +21,4 @@ router.get('/owned', async (req, res) => {
     }
 });
 
-modules.exports = router;
+module.exports = router;
