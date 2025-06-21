@@ -42,7 +42,8 @@ router.post('/login', async (req, res) => {
 router.post('/logout', (req, res) => {
     req.session.destroy(err => {
         if (err) {
-            console.error('Failed to log user out', err)
+            console.error('Failed to log user out:', err);
+            return res.status(500).json({ error: 'Logout error '})
         }
     })
 });
