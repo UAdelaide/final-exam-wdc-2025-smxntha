@@ -53,6 +53,7 @@
 
       // redirect according to response
       if (res.ok) {
+        // if owner - login to owner dashboard, else to walker dashboard
         window.location.href = result.role === 'owner' ? '/owner-dashboard.html'
         : '/walker-dashboard.html';
       } else {
