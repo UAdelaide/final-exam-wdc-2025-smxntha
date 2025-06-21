@@ -17,12 +17,15 @@ router.post('/login', async (req, res) => {
             return res.status(401).jason({ error: 'Username not found.' });
         }
 
+        // check if passwords match
         const user = rows[0];
         const match = await bycrypt.compare(password, user.password_hash);
 
         if (!match) {
             return res.status(401)/json({ error: 'Invalid password. '});
         }
+
+        // if 
     } catch (err) {
 
     }
